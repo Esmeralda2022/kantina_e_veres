@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Stilizim i brendshem */
+        *{
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        body{
+            background-color: #edede9;
+            min-height: 100vh;
+        }
+       .menu{
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+       }
+       /* .cont{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: center;
+        background-color: #c9ada7;
+        margin: 50px 200px 0 ;
+        height: 400px;
+        border-radius: 30px;
+        padding: 20px;
+        gap: 20px;
+    } */
+
+    
+    .footer{
+        background-color: #edede9;
+        /* box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8); */
+        color: black;
+        margin-bottom: 20px;
+    }
+    .footer > a{
+        color: black;
+    }
+
+  /*   .imag-fl{
+        flex:  calc(33.33% - 20px);
+        flex-wrap: wrap;
+    } */
+    .contain{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .img-fl{
+        flex: 100%;
+        text-align: center;
+       padding: 50px;
+       font-size: 20px;
+       font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    
+    @media  screen and (max-width: 990px) {
+   
+      .contain{
+         display: flex;
+         flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+       .img-fl{
+          width: 100%;
+        }
+       li > a{
+          color: black;
+        }
+ }
+     
+    </style>
+
+    <script>
+         // Funksioni me poshte ben te mundur qe te ndryshoj madhesia e logos, dhe te shkoj ne gjendjen fillestare
+         $(document).ready(function() {
+            $("#meshini").hover(function() {
+                // Mouseenter: ndryshon madhesin e tekstit kur kalojm me mouse
+                $(this).css("font-size", "100px");
+                $(this).css("color", "#3A1720");
+            }, function() {
+                // Mouseleave: shkon ne madhesin orgjinale te tekstit kur largojme mouse
+                $(this).css("font-size", "35px");
+                $(this).css("color", "rgb(241, 240, 240)");
+            });
+        });
+
+        // Funksioni me poshte ben te mundur qe te ndryshoj madhesia e tekstit
+        $(document).ready(function() {
+            $(".img-fl").hover(function() {
+                // Mouseenter: ndryshon madhesin e tekstit kur kalojm me mouse
+                $(this).css("font-size", "22px");
+                $(this).css("color", "#4f1b27");
+            }, function() {
+                // Mouseleave: shkon ne madhesin orgjinale te tekstit kur largojme mouse
+                $(this).css("font-size", "20px");
+                $(this).css("color", "black");
+    
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <div class="menu">
+        <ul>
+            <li ><a href='home.html' id="meshini">Meshini</a></li>
+            <li> <a href="home.html">Faqja kryesore</a></li>
+            <li><a href="rreth_nesh.html">Rreth nesh</a></li>
+            <li> <a href="produktet.html">Produktet</a></li>
+            <li><a href="rezervo_takim.html">Rezervo nje vizite</a></li>
+        </ul>
+    </div>
+
+        <div class="contain">
+            <div class="img-fl">
+                <img src="kantina2.jpeg" alt="" width="500px">
+                
+            </div>
+        </div>
+        
+        <div class="img-fl">
+            <h1>Rreth nesh</h1>
+            <p>
+                Kantina e veres mori forme dhjete vjet më parë nga Ana dhe Geni. 
+                Ndodhet në Permet,kantina e veres Meshini është një biznes familjar, në zhvillim të vazhdueshëm.
+                Bëjmë verë për miqtë, sepse gëzimi dhe ndarja janë të paçmueshme dhe vera është shprehja maksimale e gëzimit të tryezës.
+                Kemi krijuar nje vend qe nuk eshte thjesht një bodrum,por nje vend per te përjetuar verën me një përvojë të plotë shqisore. 
+                Mirësevini në Bodrum, mirë se vini në shtëpinë tonë. 
+            </p>
+            <blockquote>"Vera gëzon të trishtuarin, rigjallëron të moshuarin, frymëzon të rinjtë, e bën lodhjen të harrojë mundin e vet." - Lord Bajron</blockquote>
+        </div>
+    
+    <div class="footer">
+        <p>Worked by: eF</p>
+        <a href="https://www.google.com/maps?q= 69P2+7MQ,+Përmet,+Albania" target="_blank">Adresa e kantines se Veres Meshini</a>
+
+    </div>
+</body>
+</html>

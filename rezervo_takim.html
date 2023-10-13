@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script src="start.js"></script>
+    
+
+    <style>
+        /* Ketu kam perdorur stilizim te brendshem dhe ne rresht */
+        *{
+            box-sizing: border-box;
+        }
+  
+        body{
+            background-color: rgb(104, 100, 100);
+            min-height: 100vh;
+        }
+
+        .menu{
+            background-color: rgba(237, 237, 233, 0.9);
+            border: 2px solid white;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            
+            
+        }
+        li > a{
+            color: black;
+        }
+
+
+        .form1{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            
+        }
+
+        .bosh1{
+            flex: 20px;
+        }
+
+        .center{
+            flex: 40%;
+            text-align: center;
+            background-color: rgba(237, 237, 233, 0.9);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            color:black;
+            padding: 20px;
+        }
+        input{
+            border-radius: 5px;
+            
+        }
+        .bosh2{
+            flex: 20px;
+        }
+
+        @media  screen and (max-width: 990px) {
+   
+          .form1{
+           display: flex;
+           flex-direction: column;
+           flex-wrap: wrap;
+           width: 100%;
+         }
+    
+   
+}
+    </style>
+</head>
+<body >
+    <div class="menu">
+        <ul>
+            <li ><a href='home.html' id="meshini">Meshini</a></li>
+            <li> <a href="home.html">Faqja kryesore</a></li>
+            <li><a href="rreth_nesh.html">Rreth nesh</a></li>
+            <li> <a href="produktet.html">Produktet</a></li>
+            <li><a href="rezervo_takim.html">Rezervo nje vizite</a></li>
+        </ul>
+    </div><br>
+    <div class="form1">
+        <div class="bosh1"></div>
+        <div class="center" style="border-radius: 20px;">
+            <form name="myForm" action="action_page.php" onsubmit="return validateForm()" method="POST">
+                <h2 style="font-size: 30px;">Ploteson formularin per te rezervuar nje takim:</h2>
+                <label for="emri" style="font-size: 20px;">Emri:</label><br>
+                <input type="text" id="emri" name="emri" placeholder="name" ><br>
+                <label for="mbiemri" style="font-size: 20px;">Mbiemri:</label><br>
+                <input type="text" id="mbiemri" name="mbiemri" placeholder="mbiemri" ><br>
+                <label for="email" style="font-size: 20px;">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="example@example.com" ><br>
+                <label for="tel" style="font-size: 20px;">Vendosni numrin e cel</label><br>
+                <input type="tel" id="tel" name="tel" placeholder="06XXXXXXXX" >
+                <h2 style="font-size: 30px;">Zgjidh gjinin:</h2>
+                <input type="radio" id="femer" name="gjinia" value="F">
+                <label for="femer" style="font-size: 20px;">F</label><br>
+                <input type="radio" id="mashkull" name="gjinia" value="M">
+                <label for="mashkull" style="font-size: 20px;">M</label>
+                <h2 style="font-size: 30px;">Lini nje mesazh</h2>
+                <textarea name="mesazhi" id="" cols="30" rows="10" placeholder="Lini nje mesazh, minmumi i karaktereve 20"></textarea><br>
+                <button type="submit">Dergo</button>
+                </form>
+        </div>
+        <div class="bosh2" background-color: aqua;"></div>
+    </div>
+
+    <div class="footer">
+        <p>Worked by: eF</p>
+        <a href="https://www.google.com/maps?q= 69P2+7MQ,+Përmet,+Albania" target="_blank">Adresa e kantines se Veres Meshini</a>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="start.js"></script>
+
+    <title>Document</title>
+
+    <script>
+
+         // Funksioni me poshte ben te mundur qe te ndryshoj madhesia e logos, dhe te shkoj ne gjendjen fillestare
+        $(document).ready(function() {
+            $("#meshini").hover(function() {
+                // Mouseenter: ndryshon madhesin e tekstit kur kalojm me mouse
+                $(this).css("font-size", "100px");
+                $(this).css("color", "#3A1720");
+            }, function() {
+                // Mouseleave: shkon ne madhesin orgjinale te tekstit kur largojme mouse
+                $(this).css("font-size", "35px");
+                $(this).css("color", "rgb(241, 240, 240)");
+            });
+        });
+
+
+    </script>
+    
+</head>
+<body>
+
+
+    <div class="menu">
+        <ul>
+            <li ><a href='#home' id="meshini">Meshini</a></li>
+            <li> <a href="#home">Faqja kryesore</a></li>
+            <li><a href="rreth_nesh.html">Rreth nesh</a></li>
+            <li> <a href="produktet.html">Produktet</a></li>
+            <li><a href="rezervo_takim.html">Rezervo nje vizite</a></li>
+        </ul>
+    </div><br>
+    <div class="video1"  id="home"> 
+        
+            <video src="video12.mp4" controls  autoplay muted loop   ></video>
+        
+        <div class="video-overlay">
+            <h1>Verë per miqtë!</h1>
+            <a class="button1" href="produktet.html">Produktet</a>
+
+       </div>
+    </div>
+    <div class="container" >
+        <div class="row1">
+            <h2>Kantina e Veres!</h2>
+            <p>Kantina e veres mori forme dhjete vjet më parë nga Ana dhe Geni. 
+                Ndodhet në Permet,kantina e veres Ana është një biznes familjar, në zhvillim të vazhdueshëm.
+                Bëjmë verë për miqtë, sepse gëzimi dhe ndarja janë të paçmueshme dhe vera është shprehja maksimale e gëzimit të tryezës. <br>
+                Per me teper informacion kliko <a href="rreth_nesh.html">ketu</a>.
+            </p>
+        </div>
+        <div class="row2"><h2>Vere per miq!</h2>
+            <p>Sepse 80% e klientëve tanë janë miq, ne i thërrasim në emër, hamë bashkë, 
+                ndajmë një tryezë dhe një kohë, është e çmuar për ne.
+                Dhe kur e kam fjalën për 80%, kam parasysh edhe ata që janë jashtë vendit 
+                dhe që vijnë të na vizitojnë çdo vit dhe ndalojnë për të ngrënë në bodrumin tonë. <br>
+                Per me teper informacion kliko <a href="produktet.html">ketu</a>.
+            </p>
+        </div>
+        <div class="row3"><h2>Eja dhe na vizito!</h2>
+            <p>Kemi krijuar nje vend qe nuk eshte thjesht një bodrum,por 
+                nje vend per te përjetuar verën me një përvojë të plotë shqisore.
+                Mirësevini në Bodrum, mirë se vini në shtëpinë tonë. <br>
+                Per me teper informacion kliko <a href="rezervo_takim.html">ketu</a>.
+            </p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Worked by: eF</p>
+        <form  name="myForm21"   action="file.php" onsubmit="return subsEmail()"  method="POST" >
+            <input type="email" name="email" >
+            <button type="submit" >Subscribe</button>
+        </form> <br>
+        <a href="https://www.google.com/maps?q= 69P2+7MQ,+Përmet,+Albania" target="_blank">Adresa e kantines se Veres Meshini</a><br>
+
+    </div>
+
+</body>
+</html>

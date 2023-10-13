@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="index.css">
+
+    <style>
+    *{
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+        body{
+
+            min-height: 100vh;
+            background-color: rgb(104, 100, 100);
+        }
+
+        .menu{
+            background-color: #edede9;
+            background-color: rgba(237, 237, 233, 0.9);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+            
+            
+        }
+        li > a{
+            color: black;
+        }
+        
+        a:hover{
+       text-decoration: underline;
+       color: black;
+      }
+      
+     .container2{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin: 0 ;
+        
+     }
+     .flex-item{
+       flex:  calc(33.33% - 20px);
+       padding: 50px;
+       height: 500px;
+       text-align: center;
+       border-radius: 20px;
+       border: 2px solid white;
+       box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+       margin-top: 20px;
+       background-color: rgba(237, 237, 233, 0.9);
+     }
+    
+     img{
+        width: 75%;
+        height: 75%;
+     }
+     
+     label{
+        color: rgb(241, 240, 240);
+     }
+
+     input, #dropdown{
+        border-radius: 20px;
+        padding: 7px;
+     }
+
+     
+     @media  screen and (max-width: 990px) {
+   
+       .container2{
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+        }
+        
+        .flex-item{
+            width: 100%;
+        }
+   
+    }
+    
+    </style>
+
+    <script>
+
+        //Funksioni me poshte ben te mundur qe te rendis prouktet nga cmimi me i madh te cmimi me i vogel dhe anasjelltas
+    function reset1() {
+    const dropdown1 = document.getElementById('dropdown');
+    const selectedValue = dropdown1.value; 
+    const divElements = document.querySelectorAll('.flex-item');
+    const divsWithValues = [];
+
+    
+    divElements.forEach((div) => {
+        const h4Value = parseFloat(div.querySelector('h4').textContent);
+        divsWithValues.push({ div, h4Value });
+    });
+
+    if (selectedValue === 'cmulet') {
+        
+        divsWithValues.sort((a, b) => a.h4Value - b.h4Value);
+    } else if (selectedValue === 'cmlart') {
+        
+        divsWithValues.sort((a, b) => b.h4Value - a.h4Value);
+    }
+
+    
+    const container = document.querySelector('.container2');
+    container.innerHTML = ''; // Clear the container
+
+    divsWithValues.forEach((item) => {
+        container.appendChild(item.div);
+    });
+
+    return false; 
+}
+   
+
+    //Funksioni me poshte ben te mundur qe kur klikon te buttoni ne cdo produkt te hapet aplikacioni i whatsapp
+    function openWhatsApp() {
+       var phoneNumber = "+355692525069";
+       var whatsappUrl = "https://wa.me/" + phoneNumber;
+  
+      // hap WhatsApp URL ne nje faqe te re
+       window.open(whatsappUrl, "_blank");
+}
+
+    
+
+     // Funksioni me poshte ben te mundur qe te ndryshoj madhesia e logos, dhe te shkoj ne gjendjen fillestare
+    $(document).ready(function() {
+            $("#meshini").hover(function() {
+                // Mouseenter: ndryshon madhesin e tekstit kur kalojm me mouse
+                $(this).css("font-size", "100px");
+                $(this).css("color", "rgb(104, 100, 100)");
+            }, function() {
+                // Mouseleave: shkon ne madhesin orgjinale te tekstit kur largojme mouse
+                $(this).css("font-size", "35px");
+                $(this).css("color", "black");
+            });
+        });
+</script>
+
+
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li ><a href='home.html' id="meshini">Meshini</a></li>
+            <li> <a href="home.html">Faqja kryesore</a></li>
+            <li><a href="rreth_nesh.html">Rreth nesh</a></li>
+            <li> <a href="#produktet1">Produktet</a></li>
+            <li><a href="rezervo_takim.html">Rezervo nje vizite</a></li>
+        </ul>
+    </div><br>
+
+    <div>
+         <form onsubmit="return reset1();">
+             <label for="dropdown">Vendos Filtrat:</label>
+               <select id="dropdown" name="cmimi">
+                <option value="no">----Zgjidh----</option>
+                 <option value="cmulet">Nga cmimi me i ulet</option>
+                 <option value="cmlart">Nga cmimi me i larte</option>
+               </select>
+               <input type="submit" value="Rivendos">
+        </form>
+        
+    </div><br>
+    <div class="container2">
+        <div class="flex-item" id="prd1">
+            <img src="vere1.jpeg" alt=""><br>
+            <h3>Cabernet Sauvignon <br><button  class="openWhatsApp btn-sm" onclick="openWhatsApp()">Porosite</button></h3>
+            <p>Cmimi: <h4>1500 Leke </h4></p>
+        </div>
+        <div class="flex-item">
+            <img src="vere2.jpg" alt="">
+            <h3> Malbec <br><button class="openWhatsApp btn-sm" onclick="openWhatsApp()">Porosite</button> </h3>
+            <p>Cmimi: <h4>2500 Leke</h4></p>
+        </div>
+        <div class="flex-item">
+            <img src="vere3.jpeg" alt="">
+            <h3>Zinfandel <br><button class="openWhatsApp btn-sm" onclick="openWhatsApp()">Porosite</button></h3>
+            <p>Cmimi: <h4>3500 Leke </h4></p>
+        </div>
+        <div class="flex-item">
+            <img src="vere4.jpg" alt="">
+            <h3>Shiraz <br><button class="openWhatsApp btn-sm" onclick="openWhatsApp()">Porosite</button></h3>
+            <p>Cmimi: <h4>2500 Leke </h4></p>
+        </div>
+        <div class="flex-item">
+            <img src="vere5.jpeg" alt="">
+            <h3>Tempranillo <br><button class="openWhatsApp btn-sm" onclick="openWhatsApp()">Porosite</button> </h3>
+            <p>Cmimi: <h4>1000 Leke</h4></p>
+        </div>
+        <div class="flex-item">
+            <img src="vere6.jpg" alt="">
+            <h3>Pinot Noir <br><button class="openWhatsApp btn-sm" onclick="openWhatsApp()">Porosite</button> </h3>
+            <p>Cmimi:<h4> 4000 Leke</h4></p>
+        </div>
+        <div class="flex-item">
+            <img src="vere6.jpg" alt="">
+            <h3>Nebbiolo <br><button class="openWhatsApp btn-sm" onclick="openWhatsApp()">Porosite</button> </h3>
+            <p>Cmimi: <h4>3500 Leke </h4></p>
+        </div>
+        <div class="flex-item">
+            <img src="vere8.jpeg" alt="">
+            <h3>Merlot <br><button class="openWhatsApp btn-sm" onclick="openWhatsApp()">Porosite</button> </h3>
+            <p>Cmimi: <h4>700 Leke</h4></p>
+        </div>
+        <div class="flex-item">
+            <img src="vere8.jpeg" alt="">
+            <h3>Mali Xanic Merlot <br><button class="openWhatsApp btn-sm" onclick="openWhatsApp()">Porosite</button> </h3>
+            <p>Cmimi: <h4> 1200 Leke </h4></p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Worked by: eF</p>
+        <a href="https://www.google.com/maps?q= 69P2+7MQ,+Përmet,+Albania" target="_blank">Adresa e kantines se Veres Meshini</a>
+
+    </div>
+
+</body>
+</html>

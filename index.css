@@ -1,0 +1,188 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Fuggles&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+
+    background-color: #3A1720;
+    
+    min-height: 100vh;
+    
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    background-color: rgba(104, 100, 100, 0.9);
+    
+    
+    
+    border-radius: 5px;
+    
+
+}
+
+ul{
+    list-style-type: none;  
+}
+
+li{
+    float: left;
+    padding: 30px;
+}
+
+li > a{
+    text-decoration: none;
+    color: rgb(241, 240, 240);
+    font-size: 25px;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin-top: 20px;
+}
+.row1 , .row3{
+    flex: 30%;
+    background-color: rgba(104, 100, 100, 0.9);
+    color: rgb(241, 240, 240);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.row1  a, .row2 a, .row3 a{
+  
+        text-decoration: none;
+        color: rgb(241, 206, 206);
+}
+
+.row2{
+    flex: 36%;
+    background-color: rgba(104, 100, 100, 0.9);
+    color: rgb(241, 240, 240);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    margin-top: 100px ;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    color: rgb(241, 240, 240);
+    
+}
+
+.footer a{
+    text-decoration: none;
+    color: rgb(241, 240, 240);
+}
+
+.video1{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgb(33, 16, 16);
+    
+}
+
+
+.video-overlay {
+    
+    position: absolute; 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    bottom: 55px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    color: rgb(241, 240, 240);
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    
+   
+}
+
+.video-overlay > h1{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.button1{
+    border: none;
+    border-radius: 15px;
+    background-color: rgba(104, 100, 100, 0.7);
+    padding: 5px;
+    width: 30%;
+    text-align: center;
+    margin: 0 auto;
+    text-decoration: none;
+    color: rgb(241, 240, 240);
+} 
+
+
+
+
+
+#meshini{
+    font-family: 'Fuggles', cursive;
+    font-size: 40px;
+}
+
+@media  screen and (max-width: 990px) {
+   
+    .menu{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background-color: rgba(240, 248, 255,0.6);
+    }
+
+    li{
+        width: 100%;
+    }
+
+    a:hover{
+        text-decoration: underline;
+    }
+
+    .row1 , .row2, .row3{
+        flex: 100%;
+        background-color: rgba(240, 248, 255,0.7);
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .video1{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        background-color: rgb(33, 16, 16);
+        border-radius: 10px;
+        
+    }
+
+}
